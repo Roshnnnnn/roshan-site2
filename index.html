@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		hello 2nd website
+	</body>
+	<script>
+		const questions = [
+			{
+				question: "What is your favorite place for a trip?",
+				answer: "Ladhakh",
+			},
+			{
+				question: "What is your favorite food?",
+				answer: "Paneer",
+			},
+			{
+				question: "What is your favorite song?",
+				answer: "Lag Ja Gale",
+			},
+			{
+				question: "What is your favorite sport?",
+				answer: "Online Games",
+			},
+			{
+				question: "Who is your favorite superhero?",
+				answer: "Flash",
+			},
+		];
+
+		let score = 0;
+
+		for (let i = 0; i < questions.length; i++) {
+			const userAnswer = prompt(questions[i].question);
+			if (userAnswer.toLowerCase() === questions[i].answer.toLowerCase()) {
+				score += 1;
+				console.log("Correct");
+			} else {
+				score--;
+				console.log("Wrong");
+			}
+			console.log(score);
+		}
+		console.log(`Your final score is ${score} out of ${questions.length}.`);
+	</script>
+</html>
